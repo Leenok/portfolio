@@ -1,0 +1,68 @@
+.main {
+  padding: 20px 7px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.wrap {
+  margin: 20px auto;
+  border-radius: 5px;
+  max-width: 97%;
+  background: rgba(70, 70, 70, 0.3);
+}
+
+.main__title {
+  padding-top: 2rem;
+  font-size: 2.2rem;
+}
+
+.poster {
+  max-width: 95%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px 10px 10px;
+}
+
+.poster__img {
+  width: 96%;
+}
+
+.poster__caption {
+  font-size: 1.2rem;
+  line-height: 3rem;
+}
+
+.biography {
+  width: 55%;
+  margin: 0 auto;
+}
+
+.biography__title {
+  padding-top: 3rem;
+}
+
+ul {
+  text-align: justify;
+}
+
+li,
+.quote {
+  padding: 10px 5px;
+  line-height: 2.2rem;
+}
+
+h3 {
+  padding: 2rem 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.more-info__link {
+  color: #fff;
+}
+
+.more-info__link:hover {
+  color: #353232;
+}

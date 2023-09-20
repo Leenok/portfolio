@@ -1,0 +1,48 @@
+body {
+  background-image: url();
+  color: white;
+  background: #042648;
+  text-align: center;
+}
+
+label,
+textarea {
+  display: block;
+}
+
+form {
+  width: 80%;
+  margin: 0 auto;
+  background: #0B4278;
+  padding: 2em;
+  color: #f7f7f7;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="submit"],
+select {
+  width: 100%;
+  border-radius: 5px;
+  margin: 5px 0;
+  height: 25px;
+}
+
+textarea {
+  width: 100%;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+input[type="submit"] {
+  background-color: hsl(120, 75%, 14%);
+  border: none;
+  color: white;
+  padding: 5px;
+}
+
+label {
+  padding-top: 5px;
+}

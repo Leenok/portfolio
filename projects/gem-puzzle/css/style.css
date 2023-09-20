@@ -1,0 +1,115 @@
+.button-box {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    background: rgb(22, 143, 151);
+    color: white;
+    padding: 10px;
+    justify-content: center;
+    margin: 10px;
+}
+
+.check-btn {
+    background: rgb(75, 72, 72);
+}
+
+.btn:hover {
+    background: rgb(75, 72, 72);
+}
+
+.chose-size {
+    display: flex;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+
+.size {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+}
+
+.item-size {
+    margin: 5px;
+    text-decoration: underline;
+    text-decoration-color: rgb(22, 143, 151);
+    color: rgb(22, 143, 151);
+}
+
+.item-size:hover {
+    background-color: rgba(209, 252, 93, 0.692);
+}
+
+.game-block {
+    background: rgba(209, 252, 93, 0.692);
+    display: grid;
+    width: 50%;
+}
+
+.grid-three {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-four {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-five {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-six {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.grid-seven {
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.grid-eight {
+    grid-template-columns: repeat(8, 1fr);
+}
+
+.item-block {
+    background: rgb(22, 143, 151);
+    color: white;
+    font-size: 2rem;
+    margin: 2px;
+    text-align: center;
+    padding: 7px;
+    border: 1px solid rgb(22, 143, 151);
+}
+
+.empty-block {
+    background: rgba(209, 252, 93, 0.692);
+    margin: 2px;
+    text-align: center;
+    padding: 7px;
+}
+
+.win {
+    font-size: 3rem;
+    background: rgb(17, 214, 27);
+    color: aliceblue;
+    text-align: center;
+}
+
+.block {
+    background: rgba(0, 0, 0, 0.103);
+    display: none;
+}
+
+
+.block-grey {
+    display: none;
+    background: rgba(0, 0, 0, 0.342);
+
+}
+
+.center {
+    text-align: center;
+    font-size: 1.4rem;
+    margin: 0 auto;
+}
