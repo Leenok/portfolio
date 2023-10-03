@@ -1,60 +1,6 @@
+import dataJson from './quotes.json' assert { type: "json" };
 
-let dayOfWeek = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"];
-let quettis = ['«Чем умнее человек, тем легче он признает себя дураком». Альберт Эйнштейн', 
-'«Никогда не ошибается тот, кто ничего не делает». Теодор Рузвельт', 
-'«Менее всего просты люди, желающие казаться простыми». Лев Николаевич Толстой', 
-'«Мы находимся здесь, чтобы внести свой вклад в этот мир. Иначе зачем мы здесь?» Стив Джобс', 
-'«Если тебе тяжело, значит ты поднимаешься в гору. Если тебе легко, значит ты летишь в пропасть». Генри Форд',
-'«Характер – это и есть судьба». Майя Плисецкая',
-'Победа - это еще не все, все - это постоянное желание побеждать. Винс Ломбарди',
-'Ваше время ограничено, не тратьте его, живя чужой жизнью Стив Джобс',
-'80% успеха - это появиться в нужном месте в нужное время. Вуди Аллен',
-'Начинать всегда стоит с того, что сеет сомнения. Борис Стругацкий',
-'Жизнь - это то, что с тобой происходит, пока ты строишь планы. Джон Леннон',
-'Сложнее всего начать действовать, все остальное зависит только от упорства. Амелия Эрхарт',
-'Деньги и время — самое тяжелое бремя в жизни. Наиболее несчастны те, у кого их больше, чем они умеют использовать. Сэмюэл Джонсон',
-'Деньги – хороший слуга, но плохой хозяин. Фрэнсис Бэкон',
-'Жизнь — игра, а деньги — способ вести счет. Тед Тёрнер',
-'Время и деньги по большей части взаимозаменяемы. Уинстон Черчилль',
-'Я пишу не для того, чтобы просить тебя прийти, я пишу, чтобы предупредить: я всегда буду ждать. Фредерик Бегбедер',
-'Любовь одна, но подделок под нее — тысячи. Франсуа Ларошфуко',
-'Дарить любовь гораздо важнее, чем ее получать. Одри Хепберн',
-'Все может отдать мужчина своему верному другу — все, только не ту женщину, которую любит. Генрих Ибсен',
-'Женщина священна; женщина, которую любишь, священна вдвойне. Александр Дюма',
-'Когда любишь, то такое богатство открываешь в себе! Даже не верится, что ты так умеешь любить. А. П. Чехов',
-'Старость не может защитить от любви, но любовь легко защитит от старости. Коко Шанель',
-'«Не бойтесь неудач, потому что это ваш путь к успеху», — Леброн Джеймс',
-'«Цели никогда не должны быть простыми. Они должны быть неудобными, чтобы заставить вас работать», — Майкл Фелпс',
-'«Мир – высшее благо, какого люди желают в этой жизни». Мигель де Сервантес',
-'«Если у вас восьмой блин комом, к чёрту блины, лепите комочки». «Бимайн. Тариф на безлимитное счастье», Мария Свешникова',
-'«Я вовсе не хочу знать, что говорят за моей спиной, – я и без того о себе достаточно высокого мнения». Оскар Уайльд',
-'«Курить бросить легко. Я сам бросал тысячу раз». Марк Твен',
-'«В основном свободу человек проявляет только в выборе зависимости». Герман Гессе',
-'«Самый здоровый ответ на жизнь – это радость». Дипак Чопра',
-'«У кого есть "Зачем", тот выдержит почти любое "Как"». Фридрих Ницше',
-'«Надо любить жизнь больше, чем смысл жизни». Фёдор Достоевский',
-'«Влюбиться можно в красоту, но полюбить – лишь только душу!» Уильям Шекспир',
-'«Живёт свободно только тот, кто находит радость в исполнении своего долга». Цицерон',
-'«Каждому человеку свойственно ошибаться, но только глупцу свойственно упорствовать в своей ошибке» Цицерон',
-'«Бренное тело дух вечный двигает» Цицерон',
-'«Не знать истории – значит всегда быть ребёнком» Цицерон',
-'«Ведь нужно не только овладеть мудростью, но и уметь пользоваться ею» Цицерон',
-'«Когда нечем гордиться в настоящем, хвастаются вчерашними заслугами» Цицерон',
-'«Через сомнения приходим к истине» Цицерон',
-'«Величайшая победа – победа над самим собой» Цицерон',
-'«Ненавижу советы – все, кроме своих». Джек Николсон',
-'«Не оборачивается тот, кто устремлён к звёздам» Леонардо да Винчи',
-'«Ни высокий интеллект, ни воображение, ни то и другое вместе не творят гения. Любовь, любовь и любовь – вот в чём сущность гения». Вольфганг Амадей Моцарт',
-'«Фантазия мужчины – лучшее оружие женщины». Софи Лорен',
-'«Необходимо, чтобы художник, кроме глаза, воспитывал и свою душу». Василий Кандинский',
-'«Не так уж сложно изменить общество – сложно изменить себя». Нельсон Мандела',
-'«Перспектива рано умереть заставила меня понять, что жизнь стоит того, чтобы её прожить». Стивен Хокинг',
-'«Чемпионами становятся не в тренажёрных залах. Чемпиона рождает то, что у человека внутри: желания, мечты, цели». Мухаммед Али',
-'«Характер – это и есть судьба». Майя Плисецкая',
-'«Внимай лишь одному учителю – Природе». Рембрандт',
-];
-
-//2. hi
+//2. add name user
 let myStorage = window.localStorage;
 if(myStorage.name == undefined || myStorage.name === 'null'){
   let name = prompt("Ваше имя?", "");
@@ -63,12 +9,12 @@ if(myStorage.name == undefined || myStorage.name === 'null'){
 }
 
 //1. clock + time
-let mounths = ['Январь', 'Февраль','Март','Апрель', 'Май', 'Июнь','Июль','Август','Сентябрь','Ноябрь', 'Декабрь'];
-let timedayword = { "morning":"Доброе утро", "afternoon":"Добрый день", "evening":"Добрый вечер", "night":"Доброй ночи"};
+
 let dt = new Date();
 
-  let moun = mounths[dt.getMonth()]+" "+dt.getDate() ;
+  let moun = dt.getDate()+" "+  dataJson.mounths[dt.getMonth()];
   let tiday ='';
+
   function currentTime(date) {
     var date = new Date();
     let weekd = date.getDay();
@@ -81,10 +27,11 @@ let dt = new Date();
     min = updateTime(min);
     sec = updateTime(sec);
     
-    document.querySelector('.weekDay').innerText = `${moun}, ${dayOfWeek[weekd]}`;
+    document.querySelector('.weekDay').innerText = `${moun}, ${dataJson.dayOfWeek[weekd]}`;
     document.querySelector('.ti').innerText = `${hour}:${min}:${sec}`; 
+
     tiday = (hour>5 && hour<12)? "morning" : (hour>=12 && hour<18)? "afternoon": (hour>=18 && hour<24)? "evening" : "night";
-    document.querySelector('.pmDay').innerText = `${timedayword[tiday]}, ${myStorage.name}!`;
+    document.querySelector('.pmDay').innerText = `${dataJson.timedayword[tiday]}, ${myStorage.name}!`;
 
     var t = setTimeout(function(){ currentTime() }, 1000); 
   }
@@ -94,40 +41,73 @@ let dt = new Date();
   }
   currentTime();
 
-//4.quet update ))))) work!!!!!!!!!!
+//4.quote 
+  let quoteText = document.getElementById('q-text');
+  let quoteAuthor =  document.getElementById('q-author');
+
   function getRandomInt(max) {
     return Math.floor(Math.random() * max);
   }
-  function aletrr() {
-    qi.innerHTML = quettis[getRandomInt(quettis.length)]
+
+  function nextQuote() {
+    let qObj = dataJson.quits[getRandomInt(dataJson.quits.length)];
+    quoteText.innerHTML = qObj.text;
+    quoteAuthor.innerHTML = qObj.autor;
   }
-let qi = document.querySelector('.quit');
-qi.innerHTML = quettis[getRandomInt(quettis.length)];
-document.querySelector('.upquit').addEventListener('click', aletrr);
-//finish
+
+  document.querySelector('.upquote').addEventListener('click', nextQuote);
+
+  nextQuote();
 
 //3. gallery
-let galbg = document.querySelector('.bg');
-let rig = document.querySelector('.right');
-let lef = document.querySelector('.left');
+let nextFon = document.querySelector('.next-fon');
+let prevFon = document.querySelector('.prev-fon');
 let mimgs = 'https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/'+tiday+'/';
-console.log(tiday);
-document.body.style.backgroundImage = 'url('+mimgs+'18.jpg)';
 
-function nextBg(e){
+let mim = document.createElement('img');
+mim.src = mimgs+'18.jpg'; // (*)
+
+mim.onload = function() {
+  document.body.style.backgroundImage = 'url('+mimgs+'18.jpg)';
+};
+
+
+function next_Fon(){
   let ti = +document.body.style.backgroundImage.split('/').reverse()[0].split('.')[0];
   ti = (ti+1<21)? ti+1: 1;
   if(ti<10){ ti = '0'+ti;}
-  document.body.style.backgroundImage = 'url('+mimgs +(ti)+'.jpg)';
+  changeFon(ti);
+  let mim = document.createElement('img');
+  // mim.src = ''+mimgs+(ti)+'.jpg';
+  // mim.onload = function() {
+  //   document.body.style.backgroundImage = `url(${mim.src})`;
+  // };
+  
 }
-function prevBg(){
+
+function prev_Fon(){
   let ti = +document.body.style.backgroundImage.split('/').reverse()[0].split('.')[0];
   ti = (ti==1)?20: ti-1;
   if(ti<10){ ti = '0'+ti;}
-  document.body.style.backgroundImage = 'url('+mimgs +(ti)+'.jpg)';
+  changeFon(ti);
+  // let mim = document.createElement('img');
+  // mim.src = ''+mimgs+(ti)+'.jpg';
+  // mim.onload = function() {
+  //   document.body.style.backgroundImage = `url(${mim.src})`;
+  // };
 }
-rig.addEventListener('click', nextBg);
-lef.addEventListener('click', prevBg);
+
+function changeFon(srr){
+
+  let mim = document.createElement('img');
+  mim.src = ''+mimgs+(srr)+'.jpg';
+  mim.onload = function() {
+    document.body.style.backgroundImage = `url(${mim.src})`;
+  };
+}
+nextFon.addEventListener('click', next_Fon);
+prevFon.addEventListener('click', prev_Fon);
+
 ///gallery work!!!!!!!!!!!!!!!!!))))))))))))
 
 //5.audio 

@@ -3,89 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <title>Momentum</title>
 </head>
 <body>
-    
-    <div class="bg">
-        <img src="images/keyboard-left.svg" alt="left" class="left">
-        
-        
-        <div class="main-bl">
-            
-            <div class="bloks">
-                <div class="weather">
-                    <h2>Погода в городе <pspan class="city">Минск</span></h2>
-                    <input class="inp" type="text" value=""><button class="ok"> ok </button>
-                    <p class="error"></p>
-                    <img src="images/weathericon.svg" alt="weather">
-                    <p>Погода: <span class="temp"></span>°C</p>
-                    <p>Влажность: <span class="humidity"></span>%</p>
-                    <p>Ветер: <span class="wind"></span> м/с</p>
-                </div>
 
-                <div class="block">
-                    <div class="pmDay"></div>
-                    <div class="weekDay"></div>
-                    <div class="ti"></div>
-                    
-                </div>
-                <div class="blocktodo">
-                    <div>
-                        <h3>Список дел</h3>
-                        <input type="text" id="myInput"><span class="add">добавить</span>
+    <button class="prev-fon nv"> < </button>
+    <button class="next-fon nv"> > </button>
 
-                    </div>
-                    <ul id="myUL">
-                        <li>первое </li>
-                        <li>второе </li>
-                    </ul>   
-                </div>
+    <div class="bloks">
+        <div class="weather">
+            <p>Погода в городе <pspan class="city">Минск</span></p>
+            <input class="inp" type="text" value=""><button class="ok"> ok </button>
+            <p class="error"></p>
+            <img src="images/weathericon.svg" alt="weather">
+            <p>Температура: <span class="temp"></span>°C</p>
+            <p>Влажность: <span class="humidity"></span>%</p>
+            <p>Ветер: <span class="wind"></span> м/с</p>
+        </div>
 
-                <div class="player">
-                    <audio id="audio" src="song/Minor.mp3" ></audio>
-                    <div class="cont">
-                        <p class="nametrak"></p>
-                        <div class="pansong">
-                            <input class="rangtrak" min="0" max="100" value="0" type="range">
-                            <p class="timenow">0</p>
-                            <p>/</p>
-                            <p class="timeend">0</p>
-                        </div>
-                    </div>
-                        <div class="panel">
-                            <button class="prev">&#60;</button>
-                            <button class="play">|></button>
-                            <button class="next">&#62;</button>
-                            <button class="inn"><img src="images/on-speaker.svg" alt="sound" class="sou"></button>
-                            <input id="range" min="0" max="100" value="100" type="range">
-                        </div>
-                    
-                    <div class="songs">
-                        <div class="check"><button>|></button><p>Minor.mp3</p></div>
-                        <div><button>|></button><p>Papercut.mp3</p></div>
-                        <div><button>|></button><p>Sad.mp3</p></div>
-                        <div><button>|></button><p>Sia.mp3</p></div>
-                    </div>
-                   
-                </div>
+        <div class="block-time">
+            <div class="pmDay"></div>
+            <div class="weekDay"></div>
+            <div class="ti"></div> 
+        </div>
 
+        <div class="blocktodo">
+            <div>
+                <h3>Список дел</h3>
+                <input type="text" id="myInput"><span class="add">добавить</span>
             </div>
-            <div class="q">
-                <p class="quit"> </p>
-                <button class="upquit"> новая</button>
+            <ul id="myUL">
+                <li>первое </li>
+                <li>второе </li>
+            </ul>   
+        </div>
+
+        <div class="player">
+            <audio id="audio" src="song/Minor.mp3" ></audio>
+            <div class="cont">
+                <p class="nametrak"></p>
+                <div class="pansong">
+                    <input class="rangtrak" min="0" max="100" value="0" type="range">
+                    <p class="timenow">0</p>
+                    <p>/</p>
+                    <p class="timeend">0</p>
+                </div>
+            </div>
+            <div class="panel">
+                <button class="prev">&#60;</button>
+                <button class="play">|></button>
+                <button class="next">&#62;</button>
+                <button class="inn"><img src="images/on-speaker.svg" alt="sound" class="sou"></button>
+                <input id="range" min="0" max="100" value="100" type="range">
+            </div>
+            
+            <div class="songs">
+                <div class="check"><button>|></button><p>Minor.mp3</p></div>
+                <div><button>|></button><p>Papercut.mp3</p></div>
+                <div><button>|></button><p>Sad.mp3</p></div>
+                <div><button>|></button><p>Sia.mp3</p></div>
             </div>
         </div>
-        <img src="images/keyboard-right.svg" alt="right" class="right"> 
     </div>
-     
 
-        
+    <div class="quote-block">
+        <blockquote class="quote"> 
+            <p id="q-text"></p>
+            <footer id="q-author"></footer>
+        </blockquote>
+        <button class="upquote"> новая</button>
+    </div>
     
-    <script src='script.js'></script> 
+    <script src='script.js' type="module"></script> 
 </body>
 </html>
